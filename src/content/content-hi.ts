@@ -1,4 +1,4 @@
-import { contentType } from "./content";
+import { type contentType } from "./content";
 
 export const content: contentType = {
     title: "हमारे बारे में – PDFEquips",
