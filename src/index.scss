@@ -1,0 +1,19 @@
+@import "pdfequips-navbar/scss/navbar";
+@import "pdfequips-footer/src/scss/footer";
+
+.container {
+    @include extend("container");
+}
+
+
+// About Page Styles
+
+// General Styles
+.container {
+    @include extend("container");
+    @include extend("my-8");
+}
+
+.lead {
+    @include extend("lead")
+}

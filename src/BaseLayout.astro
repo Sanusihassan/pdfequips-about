@@ -1,0 +1,36 @@
+---
+const { pathname } = Astro.url;
+const { title } = Astro.props;
+let lang = "en";
+let dir = "ltr";
+
+// Determine language and direction based on URL path
+if (pathname.startsWith("/ar")) {
+    lang = "ar";
+    dir = "rtl";
+} else if (pathname.startsWith("/es")) {
+    lang = "es";
+} else if (pathname.startsWith("/fr")) {
+    lang = "fr";
+} else if (pathname.startsWith("/hi")) {
+    lang = "hi";
+} else if (pathname.startsWith("/zh")) {
+    lang = "zh";
+}
+---
+
+<!DOCTYPE html>
+<html lang={lang} dir={dir}>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#FC271C" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/svg+xml" href="/images/icons/logo.svg" />
+        <title>{title}</title>
+        <slot name="head" />
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>

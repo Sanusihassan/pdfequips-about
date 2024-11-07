@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../BaseLayout.astro";
+import AboutPage from "../AboutPage";
+import { content } from "../content/content";
+const lang = "";
+import "../index.scss";
+---
+
+<BaseLayout title={content.title} lang={lang}>
+	<AboutPage content={content} lang={lang} />
+</BaseLayout>
