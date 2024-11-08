@@ -1,6 +1,6 @@
 "use client";
 import Navbar from 'pdfequips-navbar';
-import { Footer } from "pdfequips-footer/src/Footer";
+import { Footer } from "pdfequips-footer/components/Footer";
 import { type contentType } from './content/content';
 
 const AboutPage = ({ content, lang }: { content: contentType; lang: string }) => {
